@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon:wght@300;400;500;700&family=Hanuman:wght@300;400;500;700&family=Caprasimo&family=Poppins:wght@300;400;500;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  * {
+    @apply font-hanuman scroll-smooth
+    
+  }
+
+  #root {
+    @apply flex flex-col
+  }
+
+  nav a.active {
+    @apply text-green-500 bg-green-100 border-l-[5px] border-green-500
+  }
+}
+
+@layer components {
+  .closeMenu {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .openMenu {
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 0 99%);
+  }
+
+  article {
+    @apply max-w-6xl px-5 w-full bg-gray-200 lg:rounded-md pb-10 pt-10 mt-10
+  }
+
+  .primary-button{
+    @apply bg-green-500 hover:bg-green-400 px-3 gap-1 py-1 text-sm shadow-sm hover:shadow-lg tracking-wider hover:border-green-400 text-center text-white rounded-xl flex items-center font-bayon
+  }
+}
